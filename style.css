@@ -1,0 +1,88 @@
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+ul.custom-style {
+    color: grey;
+    list-style-type: circle;
+    list-style-position: outside;
+}
+
+/* pseudo class ::marker - styling li markers */
+ul li.important::marker {
+    color: red;
+}
+
+ul.reset-style {
+
+    list-style-type: none;
+    /*padding: 0;*/
+}
+
+ul.image-marker {
+    list-style-image: url();
+}
+
+ol.custom-style {
+
+    list-style-type: upper-roman;
+}
+
+/* Definition title*/
+
+dt {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 3 px solid white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+dd {
+    background-color: blue;
+    color: white;
+    margin-left: 0;
+    padding: 10px;
+    margin-bottom: 2px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+ol.custom-marker {
+    list-style-type: none;
+    counter-reset: count;
+}
+
+ol.custom-marker li::before {
+    content: '[' counter(count)'] ';
+    color: darkblue;
+    counter-increment: count;
+}
+
+h2::before,
+h2::after {
+    content: '*';
+    color: red;
+}
+
+/*------MultiLevel list styling*/
+ol {
+    color: darkgray;
+}
+
+/* level 2*/
+ol ol {
+    list-style-type: georgian;
+    color: darkblue;
+}
+
+ol ul {
+    color: darkorange;
+}
+
+ol ul ul {
+    color: blueviolet;
+}
